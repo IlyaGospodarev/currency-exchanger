@@ -1,0 +1,21 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet author="oladka" id="initial-schema" >
+        <createTable tableName="currency">
+            <column name="base_currency_code" type="VARCHAR(3)">
+                <constraints primaryKey="true" nullable="false" primaryKeyName="PK_currency"/>
+            </column>
+            <column name="currency_code" type="VARCHAR(3)">
+                <constraints primaryKey="true" nullable="false" primaryKeyName="PK_currency"/>
+            </column>
+            <column name="exchange_rate" type="NUMERIC">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
